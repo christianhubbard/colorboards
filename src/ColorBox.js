@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import "./ColorBox.css"
 
 export default class ColorBox extends Component {
     render() {
         return (
-            <div style={{background: this.props.background}}>
+            <div className="ColorBox" style={{background: this.props.background}}>
                 <span>MORE</span>
+                <span>{this.props.name}</span>
             </div>
         )
     }
