@@ -1,0 +1,54 @@
+// You are given a list of trips that together form a journey from one place to another. 
+// A trip has the form [starting place of the trip, destination place of the trip]. 
+// You are given the trips in random order. 
+// Write a function to find out what is the starting place of the journey. 
+// You may assume you are given the trips of the journey in a suitable data structure of your choice. 
+// You may assume a place is represented by a string.
+
+// Example 1:
+// exampleTrips := [[Cologne,Berlin],[Munich,Cologne],[YourPlace,Munich]]
+// The starting place of the journey given by exampleTrips is "YourPlace".
+
+// Example 2:
+// exampleTrips := [ [A,B], [B,C], [C,D] ]
+// The trip in this example started at "A".
+
+// Example 3:
+// exampleTrips := [ [D,E], [F,D], [E,X] ] 
+// The trip in this example started at "F".
+
+
+function journey(tripsArray){
+    //We can assume we'll always start our examination at the zeroth index of the zeroth item in our array
+    let curLocation = tripsArray[0][0]
+    //we're going to compare that zeroth index with the first index of other array items in this for loop
+    for(let i = 1; i < tripsArray.length; i++){
+        //if we have a match, we know that our location originated from a different location.
+        if (tripsArray[i][1] === curLocation) {
+            //we'll re-assign that location to be our current location
+            curLocation = tripsArray[i][0]
+            //then use a bit of dynamic programming to backtrack to the trips origin
+            backtrack(tripsArray, curLocation)
+        }
+    }
+
+    return curLocation
+}
+
+//here, we're recursively calling the backtrack function until we aren't getting matches of a trip destination.
+//if we have an origin with no destination, it was the entire trip's origin.
+//this function uses almost identical logic, but extrapolating into a seperate function makes the original much easier to comprehend.
+function backtrack(tripsArray, curLocation){
+    for(let i = 0; i < tripsArray.length; i++){
+        if (tripsArray[i][1] === curLocation) {
+        curLocation = tripsArray[i][1]
+        backtrack(tripsArray, curLocation)
+    }
+        //as mentioned above, if we don't have a destination for our origin, it was the trip origin. 
+        else return curLocation
+    }
+}
+
+// console.log(journey([["Cologne","Berlin"],["Munich","Cologne"],["YourPlace","Munich"]]))
+// console.log(journey([ ['A','B'], ['B','C'], ['C','D'] ]))
+// console.log(journey([ ['D','E'], ['F','D'], ['E','X'] ] ))
