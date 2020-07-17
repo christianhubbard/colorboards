@@ -6,3 +6,38 @@
     position: relative;
     cursor: pointer;
 }
+
+.copy-button {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -15px;
+    text-align:center;
+    outline: none;
+    background: rgba(255,255,255,0.3);
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    border:none;
+    opacity: 0;
+}
+
+.ColorBox:hover .copy-button {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.box-content {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    color: black;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
