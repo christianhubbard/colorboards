@@ -73,3 +73,44 @@
     position: absolute;
     
 }
+
+.copy-msg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    transform: scale(0.1);
+    opacity: 0;
+    color: white;
+}
+
+.copy-msg.show {
+    opacity:1;
+    transform: scale(1);
+    z-index: 25;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.copy-msg h1{
+    font-weight: 400;
+    text-shadow: 1px 2px black;
+    background: rgba(255,255,255,0.2);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    padding:1rem;
+    text-transform: uppercase;
+}
+
+
+.copy-msg p {
+    font-size: 2rem;
+    font-weight: 100;
+}
