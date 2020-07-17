@@ -7,13 +7,13 @@ export default class ColorBox extends Component {
         return (
             <div style={{background}} className="ColorBox">
                 <div className="copy-container">
-                    <div className ="box-content" >
+                    <div className ="box-content">
                         <span>{name}</span>
                     </div>
                     <button className="copy-button">Copy</button>
                 </div>
-                <span className="see-more">see more</span>
+                <span className="see-more">More</span>
             </div>
-        )
+        );
     }
 }
