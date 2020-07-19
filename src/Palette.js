@@ -19,17 +19,19 @@ import Navbar from './Navbar'
 
     changeFormat(val){
         this.setState({format: val})
+        console.log(val)
     }
 
     render() {
         const {colors, paletteName, emoji} = this.props.palette;
+        console.log(colors)
         const {level, format} = this.state;
         const colorBoxes = colors[level].map(color => (
             <ColorBox background={color[format]} name={color.name} key={color.id}/>
         ))
         return (
             <div className='Palette'>
-                <Navbar level={level} handleChange={this.changeFormat}changeLevel={this.changeLevel} />
+                <Navbar level={level} handleChange={this.changeFormat} changeLevel={this.changeLevel} />
                 <div className='Palette-colors'>{colorBoxes}</div>
                 <footer className='Palette-footer'>
                     {paletteName}

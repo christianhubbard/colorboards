@@ -22,6 +22,7 @@ export default class Navbar extends Component {
 
     handleFormatChange(e){
         this.setState({format: e.target.value, open: true })
+        console.log(e.target.value)
         this.props.handleChange(e.target.value);
 
     }
@@ -47,7 +48,7 @@ export default class Navbar extends Component {
                     <Select value={format} onChange={this.handleFormatChange}>
                         <MenuItem value='hex'> HEX - #fffff</MenuItem>
                         <MenuItem value='rgb'> RGB - rgb(255,255,255)</MenuItem>
-                        <MenuItem value='rgba'> rgba - rgba(255,255,255,1.0)</MenuItem>
+                        <MenuItem value='rgba'> RGBA - rgba(255,255,255,1.0)</MenuItem>
                     </Select>
                 </div>
                 <Snackbar 
