@@ -15,6 +15,7 @@ import Navbar from './Navbar'
 
     changeLevel(level) {
         this.setState({ level })
+        console.log(level)
     }
 
     changeFormat(val){
