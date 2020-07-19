@@ -32,8 +32,8 @@ import Navbar from './Navbar'
                 <Navbar level={level} handleChange={this.changeFormat}changeLevel={this.changeLevel} />
                 <div className='Palette-colors'>{colorBoxes}</div>
                 <footer className='Palette-footer'>
-                {paletteName}
-                <span className='emoji'>{emoji}</span>    
+                    {paletteName}
+                    <span className='emoji'>{emoji}</span>    
                 </footer>
             </div>
         )
