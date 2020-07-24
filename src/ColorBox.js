@@ -33,7 +33,9 @@ export default class ColorBox extends Component {
                         </div>
                         <button className="copy-button">Copy</button>
                     </div>
-                    <span className="see-more">More</span>
+                    <Link to='/'>
+                        <span className="see-more">More</span>
+                    </Link>
                 </div>
             </CopyToClipboard>
         );
