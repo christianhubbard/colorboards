@@ -23,7 +23,7 @@ export default class SingleColorPalette extends Component {
     }
     render() {
         const colorBoxes = this._shades.map( color => (
-            <ColorBox key={color.id} name={color.name} color={color.hex} showLink={false}/>
+            <ColorBox key={color.id} name={color.name} background={color.hex} showLink={false}/>
         ));
         return (
             <div className='Palette'>
