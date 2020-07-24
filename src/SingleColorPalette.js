@@ -39,7 +39,7 @@ export default class SingleColorPalette extends Component {
         console.log(this._shades)
         return (
             <div className='Palette'>
-                <NavBar handleChange={this.changeFormat} />
+                <NavBar handleChange={this.changeFormat} showSlider={false}/>
                 <div className='Palette-colors'>
                     {colorBoxes}
                 </div>

@@ -29,7 +29,7 @@ import Navbar from './Navbar'
         ))
         return (
             <div className='Palette'>
-                <Navbar level={level} handleChange={this.changeFormat} changeLevel={this.changeLevel} />
+                <Navbar level={level} handleChange={this.changeFormat} changeLevel={this.changeLevel} showSlider/>
                 <div className='Palette-colors'>{colorBoxes}</div>
                 <footer className='Palette-footer'>
                     {paletteName}
