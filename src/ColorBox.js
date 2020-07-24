@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import {CopyToClipboard } from 'react-copy-to-clipboard';
 import "./ColorBox.css"
 
+import {Link} from 'react-router-dom'
+
 export default class ColorBox extends Component {
     constructor(props){
         super(props);
