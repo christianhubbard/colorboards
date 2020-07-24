@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ColorBox from './ColorBox'
 import NavBar from "./Navbar"
+import PaletteFooter from './PaletteFooter'
 import './Palette.css'
 
 export default class SingleColorPalette extends Component {
@@ -29,6 +30,7 @@ export default class SingleColorPalette extends Component {
     };
     render() {
         const {format} = this.state;
+        const {paletteName, emoji} = this.props.palette;
         const colorBoxes = this._shades.map( color => (
             <ColorBox 
             key={color.id} 
@@ -43,6 +45,7 @@ export default class SingleColorPalette extends Component {
                 <div className='Palette-colors'>
                     {colorBoxes}
                 </div>
+                <PaletteFooter paletteName={paletteName} emoji={emoji} />
             </div>
         )
     }
