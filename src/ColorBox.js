@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import {CopyToClipboard } from 'react-copy-to-clipboard';
 import "./ColorBox.css"
 import chroma from 'chroma-js'
+import {withStyles} from "@material-ui/styles"
 
 import {Link} from 'react-router-dom'
 
-export default class ColorBox extends Component {
+const styles = {
+    copyText: {
+        color: props => chroma(props.background).luminance() >= 0.62 ? 'black' : 'white'
+    }
+}
+
+class ColorBox extends Component {
     constructor(props){
         super(props);
         this.state ={ copied: false };
@@ -18,7 +25,7 @@ export default class ColorBox extends Component {
         })
     }
     render() {
-        const {name, background, paletteId, id, showLink} = this.props
+        const {name, background, paletteId, id, showLink, classes} = this.props
         const {copied} = this.state;
         const isDarkColor = chroma(background).luminance() <= 0.08;
         const isLightColor = chroma(background).luminance() >= 0.62;
@@ -28,7 +35,7 @@ export default class ColorBox extends Component {
                     <div style={{background}} className={`copy-overlay ${copied && 'show'}`} />
                     <div className={`copy-msg ${copied && 'show'}`}>
                         <h1>Copied!</h1>
-                        <p className={isLightColor && "dark-text"}>{background}</p>
+                        <p className={classes.copyText}>{background}</p>
                     </div>
                     <div className="copy-container">
                         <div className ="box-content">
@@ -44,3 +51,5 @@ export default class ColorBox extends Component {
         );
     }
 }
+
+export default withStyles(styles)(ColorBox);
