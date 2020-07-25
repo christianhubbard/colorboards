@@ -6,7 +6,14 @@ import PaletteFooter from './PaletteFooter';
 import {withStyles} from "@material-ui/styles"
 
 const styles = {
-
+    Palette:{
+        height:`100vh`,
+        display: `flex`,
+        flexDirection: `column`,
+    },
+    colors: {
+        height: `90%`,
+    }
 }
  class Palette extends Component {
     constructor(props){
@@ -29,14 +36,15 @@ const styles = {
 
     render() {
         const {colors, paletteName, emoji, id} = this.props.palette;
+        const {classes} = this.props;
         const {level, format} = this.state;
         const colorBoxes = colors[level].map(color => (
             <ColorBox background={color[format]} name={color.name} key={color.id} id={color.id} showingFullPalette={true} paletteId={id}/>
         ))
         return (
-            <div className='Palette'>
+            <div className={classes.Palette}>
                 <Navbar level={level} handleChange={this.changeFormat} changeLevel={this.changeLevel} showSlider/>
-                <div className='Palette-colors'>{colorBoxes}</div>
+                <div className={classes.colors}>{colorBoxes}</div>
                 <PaletteFooter paletteName={paletteName} emoji={emoji} />
             </div>
         )
