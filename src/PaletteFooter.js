@@ -1,5 +1,4 @@
 import React from 'react'
-import './Palette.css'
 
 import styles from './styles/FooterStyles'
 import {withStyles} from '@material-ui/styles';
