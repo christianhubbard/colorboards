@@ -26,7 +26,7 @@ import PaletteFooter from './PaletteFooter';
         const {colors, paletteName, emoji, id} = this.props.palette;
         const {level, format} = this.state;
         const colorBoxes = colors[level].map(color => (
-            <ColorBox background={color[format]} name={color.name} key={color.id} id={color.id} showLink={true} paletteId={id}/>
+            <ColorBox background={color[format]} name={color.name} key={color.id} id={color.id} showingFullPalette={true} paletteId={id}/>
         ))
         return (
             <div className='Palette'>
