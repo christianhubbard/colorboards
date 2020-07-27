@@ -9,9 +9,56 @@ import { Link } from "react-router-dom"
 import 'rc-slider/assets/index.css';
 import './Navbar.css'
 
+import {withStyles} from '@material-ui/styles';
 
-
-export default class Navbar extends Component {
+const styles = {
+    Navbar: {
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `flex-start`,
+        height: `6vh`,
+    },  
+    logo: {
+        marginRight: `15px`,
+        padding: `0 13px`,
+        fontSize: `22px`,
+        backgroundColor: `#eceff1`,
+        fontFamily: `Roboto`,
+        height: `100%`,
+        display: `flex`,
+        alignItems: `center`,
+        "& a": {
+            textDecoration: `none`,
+            color: `black`,
+        }
+    },
+    slider: {
+        width: `340px`,
+        margin: `0 10px`,
+        display: `inline-block`,
+        "& .rc-slider-track": {
+            backgroundColor: `transparent`,
+        },
+        "& .rc-slider-rail": {
+            height: "8px"
+        },
+        "& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus, .rc-slider-handle:hover" : {
+            backgroundColor: `green`,
+            outline: `none`,
+            border: `2px solid green`,
+            boxShadow: `none`,
+            width: `13px`,
+            height: `13px`,
+            marginLeft: `-7px`,
+            marginTop: `-3px`,
+        }
+    },
+    selectContainer: {
+        marginLeft: 'auto',
+        marginRight: '1rem',
+    }
+};
+ class Navbar extends Component {
     constructor(props){
         super(props)
         this.state = { format: "hex",
@@ -23,7 +70,6 @@ export default class Navbar extends Component {
 
     handleFormatChange(e){
         this.setState({format: e.target.value, open: true })
-        console.log(e.target.value)
         this.props.handleChange(e.target.value);
 
     }
@@ -32,22 +78,22 @@ export default class Navbar extends Component {
         this.setState({open:false})
     }
     render() {
-        const {level, changeLevel } = this.props
+        const {level, changeLevel, classes } = this.props
         const {format, open} = this.state;
         return (
-            <header className='Navbar'>
-                <Link className='logo' to ='/'>
+            <header className={classes.Navbar}>
+                <Link className={classes.logo} to ='/'>
                     reactcolorpicker
                 </Link>
                 {this.props.showSlider && 
-                    <div className='slider-container'>
+                    <div>
                     <span>Level: {level}</span>
-                    <div className='slider'>
+                    <div className={classes.slider}>
                         <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel}/>
                     </div>
                     </div>
                 }
-                <div className='select-container'>
+                <div className={classes.selectContainer}>
                     <Select value={format} onChange={this.handleFormatChange}>
                         <MenuItem value='hex'> HEX - #fffff</MenuItem>
                         <MenuItem value='rgb'> RGB - rgb(255,255,255)</MenuItem>
@@ -70,3 +116,6 @@ export default class Navbar extends Component {
         )
     }
 }
+
+
+export default withStyles(styles)(Navbar);
