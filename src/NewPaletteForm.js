@@ -90,6 +90,14 @@ class NewPaletteForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     };
 
+    componentDidMount(){
+        ValidatorForm.addValidationRule('isColorNameUnique', (value) =>
+            this.state.colors.every(
+                ({name}) => name.toLowerCase() !== value.toLowerCase()
+            )
+        );
+    }
+
   handleDrawerOpen = () => {
     this.setState({ open: true });
   };
@@ -160,7 +168,12 @@ class NewPaletteForm extends Component {
           </div>
           <ChromePicker color={this.state.currentColor} onChangeComplete={(newColor) => this.updateCurrentColor(newColor) }/>
           <ValidatorForm onSubmit={this.addNewColor}>
-              <TextValidator value={this.state.newName} onChange={this.handleChange} />
+              <TextValidator 
+              value={this.state.newName} 
+              onChange={this.handleChange} 
+              validators={["required", "isColorNameUnique"]}
+              errorMessages={["this field is required", "Color name must be unique"]}
+              />
           <Button 
             variant='contained' 
             type='submit'
