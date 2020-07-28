@@ -116,7 +116,7 @@ class NewPaletteForm extends Component {
 
   addNewColor() {
       const newColor = {color: this.state.currentColor, name: this.state.newName}
-      this.setState({colors:[...this.state.colors, newColor]})
+      this.setState({colors:[...this.state.colors, newColor], newName:""})
   }
 
   handleChange(evt){
@@ -176,7 +176,7 @@ class NewPaletteForm extends Component {
               value={this.state.newName} 
               onChange={this.handleChange} 
               validators={["required", "isColorNameUnique", "isColorUnique"]}
-              errorMessages={["this field is required", "Color name must be unique", "Color already used"]}
+              errorMessages={["Enter a color name", "Color name must be unique", "Color already used"]}
               />
           <Button 
             variant='contained' 
