@@ -92,6 +92,7 @@ class NewPaletteForm extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.removeColor = this.removeColor.bind(this);
+        this.clearColors = this.clearColors.bind(this);
     };
 
     componentDidMount(){
@@ -155,6 +156,9 @@ class NewPaletteForm extends Component {
     }))
   };
   
+  clearColors(){
+    this.setState({colors: []})
+  }
 
   render() {
     const { classes } = this.props;
@@ -212,7 +216,7 @@ class NewPaletteForm extends Component {
           <Divider />
           <Typography variant='h4' color='inherit' noWrap>Design Your Palette!</Typography>
           <div>
-            <Button variant='contained' color='secondary'>Clear Palette</Button>
+            <Button variant='contained' color='secondary' onClick={this.clearColors}>Clear Palette</Button>
             <Button variant='contained' color='primary'>Random Color</Button>
           </div>
           <ChromePicker color={this.state.currentColor} onChangeComplete={(newColor) => this.updateCurrentColor(newColor) }/>
