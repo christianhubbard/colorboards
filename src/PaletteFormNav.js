@@ -64,6 +64,7 @@ const styles =  theme => ({
         };
         this.handleChange = this.handleChange.bind(this);
         this.showForm = this.showForm.bind(this);
+        this.hideForm = this.hideForm.bind(this);
 
     }
 
@@ -75,6 +76,10 @@ const styles =  theme => ({
 
     showForm() {
         this.setState({formShowing: true})
+    }
+
+    hideForm() {
+        this.setState({formShowing: false})
     }
 
     render() {
@@ -117,7 +122,7 @@ const styles =  theme => ({
                         </Button>
                     </div>
                 </AppBar>
-                {this.state.formShowing && <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit}/>}
+                {this.state.formShowing && <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} hideForm={this.hideForm} />}
             </div>
         )
     }
