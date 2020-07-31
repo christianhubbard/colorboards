@@ -12,7 +12,7 @@ export default class paletteMetaForm extends Component {
     constructor(props){
         super(props)
         this.state = {
-            open: false,
+            open: true,
             newPaletteName: '',
         }
         this.handleChange = this.handleChange.bind(this);
@@ -42,35 +42,34 @@ export default class paletteMetaForm extends Component {
     render() {
         const {newPaletteName, open} = this.state;
         return (
-            <div>
-                <Button
-                    variant='outlined'
-                    color='primary'
-                    onClick={this.handleClickOpen}
-                    >
-                        Open form dialog
-                    </Button>
-                    <Dialog
-                        open={open}
-                        onClose={this.handleClose}
-                        aria-labelledby='form-dialog-title'
-                        >
-                            <DialogTitle id='form-dialog-title'>Subscribe</DialogTitle>
-                            <DialogContent>
-                            <ValidatorForm onSubmit={() => this.props.handleSubmit(newPaletteName)}>
-                            <TextValidator 
-                                name='newPaletteName'
-                                value={newPaletteName} 
-                                label="Palette Name" 
-                                onChange={this.handleChange} 
-                                validators={['required', "PaletteNameUnique"]}
-                                errorMessages={['Enter Palette Name', "Name already used"]}
-                            />
-                            <Button variant='contained' color='primary' type='submit' >Save Palette</Button>
-                        </ValidatorForm>
-                            </DialogContent>
-                    </Dialog>
-            </div>
+            <Dialog
+                open={open}
+                onClose={this.handleClose}
+                aria-labelledby='form-dialog-title'
+                >
+                    <DialogTitle id='form-dialog-title'>Choose A Palette Name</DialogTitle>
+                    <ValidatorForm onSubmit={() => this.props.handleSubmit(newPaletteName)}>
+                    <DialogContent>
+                        <DialogContentText>
+                            Please Enter A Name For Your New Beautiful Colorboard. Make Sure It's Unique!
+                        </DialogContentText>
+                    <TextValidator 
+                        name='newPaletteName'
+                        value={newPaletteName} 
+                        label="Palette Name" 
+                        fullWidth
+                        margin='normal'
+                        onChange={this.handleChange} 
+                        validators={['required', "PaletteNameUnique"]}
+                        errorMessages={['Enter Palette Name', "Name already used"]}
+                    />
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={this.handleClose}>Cancel</Button>
+                        <Button variant='contained' color='primary' type='submit' >Save Palette</Button>
+                    </DialogActions>
+                    </ValidatorForm>
+            </Dialog>
         )
     }
 }
