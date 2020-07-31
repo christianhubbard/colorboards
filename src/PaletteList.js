@@ -24,7 +24,7 @@ import {Link} from 'react-router-dom'
                         {palettes.map(palette => (
                                 <MiniPalette {...palette} handleClick={() => this.goToPalette(palette.id)}/>
                             )
-                            )};
+                            )}
                     </div>
                 </div>
       

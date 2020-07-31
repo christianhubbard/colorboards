@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import PaletteMetaForm from './PaletteMetaForm'
 
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -92,7 +93,7 @@ const styles =  theme => ({
                     </Typography>
                     </Toolbar>
                     <div className={classes.navBtns}>
-                        <ValidatorForm onSubmit={() => this.props.handleSubmit(newPaletteName)}>
+                        {/* <ValidatorForm onSubmit={() => this.props.handleSubmit(newPaletteName)}>
                             <TextValidator 
                                 name='newPaletteName'
                                 value={this.state.newPaletteName} 
@@ -105,7 +106,8 @@ const styles =  theme => ({
                         </ValidatorForm>
                         <Link to="/">
                             <Button variant='contained' color='secondary'>Go Back</Button>
-                        </Link>
+                        </Link> */}
+                        <PaletteMetaForm />
                     </div>
 
                 </AppBar>
