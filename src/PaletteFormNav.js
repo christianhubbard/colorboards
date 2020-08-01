@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import PaletteMetaForm from './PaletteMetaForm'
 
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import AddToPhotos from "@material-ui/icons/AddToPhotos";
 
 import Button from '@material-ui/core/Button';
 
@@ -62,7 +62,7 @@ import styles from './styles/PaletteFormNavStyles'
                     onClick={this.props.handleDrawerOpen}
                     className={classNames(classes.menuButton, open && classes.hide)}
                     >
-                        <MenuIcon />
+                        <AddToPhotos />
                     </IconButton>
                     <Typography variant='h6' color='inherit' noWrap>
                         Create A Palette
