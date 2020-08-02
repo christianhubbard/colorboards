@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
-import MiniPalette from "./MiniPalette"
-
+import {Link} from 'react-router-dom'
+import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import styles from './styles/PaletteListStyles'
 import { withStyles } from "@material-ui/styles"
 import blue from "@material-ui/core/colors/blue"
 import red from "@material-ui/core/colors/red"
-
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
-
-import {Link} from 'react-router-dom'
-
+import MiniPalette from "./MiniPalette"
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Avatar from '@material-ui/core/Avatar'

@@ -43,8 +43,8 @@ import styles from './styles/PaletteFormNavStyles'
     }
 
     render() {
-        const {classes, open, palettes, handleSubmit} = this.props;
-
+        const {classes, open, palettes, handleSubmit, handleDrawerOpen} = this.props;
+        const {formShowing} = this.state;
         return (
             <div className={classes.root}>
                 <CssBaseline />
@@ -59,7 +59,7 @@ import styles from './styles/PaletteFormNavStyles'
                     <IconButton
                     color='inherit'
                     aria-label='Open drawer'
-                    onClick={this.props.handleDrawerOpen}
+                    onClick={handleDrawerOpen}
                     className={classNames(classes.menuButton, {
                         [classes.hide]: open
                     })}
@@ -84,7 +84,7 @@ import styles from './styles/PaletteFormNavStyles'
                         </Button>
                     </div>
                 </AppBar>
-                {this.state.formShowing && <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} hideForm={this.hideForm} />}
+                {formShowing && <PaletteMetaForm palettes={palettes} handleSubmit={handleSubmit} hideForm={this.hideForm} />}
             </div>
         )
     }
