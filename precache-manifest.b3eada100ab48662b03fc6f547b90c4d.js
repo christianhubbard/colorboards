@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5de84330bc2764a049b98d7ac2234388",
+    "revision": "0db995db9521f258938ad03f9ac8383b",
     "url": "/colorboards/index.html"
   },
   {
-    "revision": "15d477a5654e8f078718",
+    "revision": "ec753636168ddc072818",
     "url": "/colorboards/static/css/2.0da342d8.chunk.css"
   },
   {
-    "revision": "61c352b8c257be8f9a96",
-    "url": "/colorboards/static/css/main.5ecd60fb.chunk.css"
+    "revision": "6e40f396bb86fc234425",
+    "url": "/colorboards/static/css/main.e07c3442.chunk.css"
   },
   {
-    "revision": "15d477a5654e8f078718",
-    "url": "/colorboards/static/js/2.4a11838e.chunk.js"
+    "revision": "ec753636168ddc072818",
+    "url": "/colorboards/static/js/2.0f642956.chunk.js"
   },
   {
     "revision": "fe2f19c5d5965d51615a596cf8d07fe9",
-    "url": "/colorboards/static/js/2.4a11838e.chunk.js.LICENSE.txt"
+    "url": "/colorboards/static/js/2.0f642956.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "61c352b8c257be8f9a96",
-    "url": "/colorboards/static/js/main.daab46a2.chunk.js"
+    "revision": "6e40f396bb86fc234425",
+    "url": "/colorboards/static/js/main.a7f0a881.chunk.js"
   },
   {
     "revision": "a33dd08eb6e40f12028a",
