@@ -59,36 +59,36 @@ export default class paletteMetaForm extends Component {
         return (
             <div>
                 <Dialog open={stage === 'emoji'} onClose={hideForm}>
-                    <DialogTitle id='form-dialog-title'>Choose A Palette Emoji</DialogTitle>
-                    <Picker title='Pick a Palette Emoji' onSelect={this.savePalette}/>
+                    <DialogTitle id='form-dialog-title'>Choose A ColorBoard Emoji</DialogTitle>
+                    <Picker title='Pick a Board Emoji' onSelect={this.savePalette}/>
                 </Dialog>
                 <Dialog
                     open={stage === 'form'}
                     aria-labelledby='form-dialog-title'
                     onClose={hideForm}
                     >
-                        <DialogTitle id='form-dialog-title'>Choose A Palette Name</DialogTitle>
+                        <DialogTitle id='form-dialog-title'>Choose A ColorBoard Name</DialogTitle>
                         <ValidatorForm onSubmit={this.showEmojiPicker}>
                         <DialogContent>
                             <DialogContentText>
-                                Please Enter A Name For Your New Beautiful Colorboard. Make Sure It's Unique!
+                                Please enter a name for your awesome new ColorBoard. Make sure it's unique!
                             </DialogContentText>
 
 
                         <TextValidator 
                             name='newPaletteName'
                             value={newPaletteName} 
-                            label="Palette Name" 
+                            label="ColorBoard Name" 
                             fullWidth
                             margin='normal'
                             onChange={this.handleChange} 
                             validators={['required', "PaletteNameUnique"]}
-                            errorMessages={['Enter Palette Name', "Name already used"]}
+                            errorMessages={['Enter Board Name', "Name already used"]}
                         />
                         </DialogContent>
                         <DialogActions>
                             <Button onClick={hideForm}>Cancel</Button>
-                            <Button variant='contained' color='primary' type='submit' >Save Palette</Button>
+                            <Button variant='contained' color='primary' type='submit' >Save Board</Button>
                         </DialogActions>
                         </ValidatorForm>
                 </Dialog>

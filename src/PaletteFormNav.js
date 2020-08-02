@@ -67,7 +67,7 @@ import styles from './styles/PaletteFormNavStyles'
                         <AddToPhotos />
                     </IconButton>
                     <Typography variant='h6' color='inherit' noWrap>
-                        Create A Palette
+                        Create A ColorBoard
                     </Typography>
                     </Toolbar>
                     <div className={classes.navBtns}>
