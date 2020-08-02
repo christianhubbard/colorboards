@@ -35,7 +35,7 @@ import styles from './styles/NavbarStyles';
         const {format, open} = this.state;
         return (
             <header className={classes.Navbar}>
-                <Link className={classes.logo} to ='/'>
+                <Link className={classes.logo} to ='/colorboards'>
                     ColorBoards
                 </Link>
                 {this.props.showSlider && 

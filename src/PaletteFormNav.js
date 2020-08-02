@@ -71,7 +71,7 @@ import styles from './styles/PaletteFormNavStyles'
                     </Typography>
                     </Toolbar>
                     <div className={classes.navBtns}>
-                        <Link to="/">
+                        <Link to="/colorboards">
                             <Button variant='contained' color='secondary' className={classes.button}>Go Back</Button>
                         </Link>
                         <Button
