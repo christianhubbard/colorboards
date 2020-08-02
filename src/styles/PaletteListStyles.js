@@ -32,7 +32,7 @@ export default {
         alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
-        [sizes.down('xl')] : {
+        [sizes.down('lg')] : {
             width: '80%'
         },
         [sizes.down('xs')] : {
