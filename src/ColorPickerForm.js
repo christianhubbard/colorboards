@@ -52,7 +52,7 @@ class ColorPickerForm extends Component {
         const {currentColor, newColorName } = this.state;
         return (
             <div>
-                <ChromePicker className={classes.picker} color={currentColor} onChangeComplete={(newColor) => this.updateCurrentColor(newColor) }/>
+                <ChromePicker className={classes.picker} color={currentColor} onChange={(newColor) => this.updateCurrentColor(newColor) }/>
                 <ValidatorForm onSubmit={this.handleSubmit}>
                     <TextValidator 
                     name='newColorName'
