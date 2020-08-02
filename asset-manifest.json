@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/colorboards/static/css/main.e07c3442.chunk.css",
-    "main.js": "/colorboards/static/js/main.9ab37029.chunk.js",
-    "main.js.map": "/colorboards/static/js/main.9ab37029.chunk.js.map",
+    "main.js": "/colorboards/static/js/main.6e182e9a.chunk.js",
+    "main.js.map": "/colorboards/static/js/main.6e182e9a.chunk.js.map",
     "runtime-main.js": "/colorboards/static/js/runtime-main.c19dd06e.js",
     "runtime-main.js.map": "/colorboards/static/js/runtime-main.c19dd06e.js.map",
     "static/css/2.0da342d8.chunk.css": "/colorboards/static/css/2.0da342d8.chunk.css",
     "static/js/2.0f642956.chunk.js": "/colorboards/static/js/2.0f642956.chunk.js",
     "static/js/2.0f642956.chunk.js.map": "/colorboards/static/js/2.0f642956.chunk.js.map",
     "index.html": "/colorboards/index.html",
-    "precache-manifest.c397fb615cba65d4e4980156371d9b52.js": "/colorboards/precache-manifest.c397fb615cba65d4e4980156371d9b52.js",
+    "precache-manifest.bfa562a042be6d1a3dbb4d9a329ae87d.js": "/colorboards/precache-manifest.bfa562a042be6d1a3dbb4d9a329ae87d.js",
     "service-worker.js": "/colorboards/service-worker.js",
     "static/css/2.0da342d8.chunk.css.map": "/colorboards/static/css/2.0da342d8.chunk.css.map",
     "static/css/main.e07c3442.chunk.css.map": "/colorboards/static/css/main.e07c3442.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.0da342d8.chunk.css",
     "static/js/2.0f642956.chunk.js",
     "static/css/main.e07c3442.chunk.css",
-    "static/js/main.9ab37029.chunk.js"
+    "static/js/main.6e182e9a.chunk.js"
   ]
 }
