@@ -21,7 +21,7 @@ export default {
         backgroundAttachment: `fixed`,
         backgroundSize: `cover`,
         /* background by SVGBackgrounds.com */
-        overflow: `scroll`,
+        overflowY: `auto`,
     },
     heading: {
         fontSize: '2rem',
@@ -50,7 +50,7 @@ export default {
         },
     },
     palettes: {
-        boxSizing: 'broder-box',
+        boxSizing: 'border-box',
         width: '100%',
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 30%)',

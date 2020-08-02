@@ -31,6 +31,7 @@ import CloseIcon from '@material-ui/icons/Close'
         this.openDialog = this.openDialog.bind(this);
         this.closeDialog = this.closeDialog.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.goToPalette = this.goToPalette.bind(this);
     }
     goToPalette(id){
         this.props.history.push(`/palette/${id}`)
@@ -62,7 +63,7 @@ import CloseIcon from '@material-ui/icons/Close'
                         <TransitionGroup className={classes.palettes}>
                             {palettes.map(palette => (
                                     <CSSTransition key={palette.id} classNames='fade' timeout={500}>
-                                        <MiniPalette {...palette} handleClick={() => this.goToPalette(palette.id)} openDialog={this.openDialog} key={palette.id} id={palette.id}/>
+                                        <MiniPalette {...palette} goToPalette={this.goToPalette} openDialog={this.openDialog} key={palette.id} id={palette.id}/>
                                     </CSSTransition>
                                 )
                                 )}
