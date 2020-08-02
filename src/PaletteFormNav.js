@@ -60,7 +60,9 @@ import styles from './styles/PaletteFormNavStyles'
                     color='inherit'
                     aria-label='Open drawer'
                     onClick={this.props.handleDrawerOpen}
-                    className={classNames(classes.menuButton, open && classes.hide)}
+                    className={classNames(classes.menuButton, {
+                        [classes.hide]: open
+                    })}
                     >
                         <AddToPhotos />
                     </IconButton>

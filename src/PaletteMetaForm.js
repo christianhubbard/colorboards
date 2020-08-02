@@ -54,7 +54,7 @@ export default class paletteMetaForm extends Component {
 
     render() {
         const {newPaletteName, stage} = this.state;
-        const {hideForm, handleSubmit} = this.props;
+        const {hideForm} = this.props;
         
         return (
             <div>
