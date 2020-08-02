@@ -32,6 +32,9 @@ export default {
         alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
+        [sizes.down('xl')] : {
+            width: '50%'
+        },
         [sizes.down('lg')] : {
             width: '80%'
         },
@@ -52,6 +55,7 @@ export default {
     palettes: {
         boxSizing: 'border-box',
         width: '100%',
+        justifyContent: 'space-between',
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 30%)',
         gridGap: '1.5rem',

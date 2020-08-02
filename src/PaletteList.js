@@ -53,8 +53,8 @@ import CloseIcon from '@material-ui/icons/Close'
             <div className={classes.root}>
                 <div className={classes.container} >
                     <nav className={classes.nav}>
-                        <h1 className={classes.heading}>React Colors</h1>
-                        <Link to="/palette/new">Create Palette</Link>
+                        <h1 className={classes.heading}>ColorBoards</h1>
+                        <Link to="/palette/new">Create ColorBoard</Link>
                     </nav>
                         <TransitionGroup className={classes.palettes}>
                             {palettes.map(palette => (

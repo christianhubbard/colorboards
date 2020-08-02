@@ -36,7 +36,7 @@ import styles from './styles/NavbarStyles';
         return (
             <header className={classes.Navbar}>
                 <Link className={classes.logo} to ='/'>
-                    reactcolorpicker
+                    ColorBoards
                 </Link>
                 {this.props.showSlider && 
                     <div>

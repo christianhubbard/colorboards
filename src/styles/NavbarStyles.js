@@ -11,6 +11,7 @@ export default {
         marginRight: `15px`,
         padding: `0 13px`,
         fontSize: `22px`,
+        textDecoration: 'none',
         backgroundColor: `#eceff1`,
         fontFamily: `Roboto`,
         height: `100%`,
