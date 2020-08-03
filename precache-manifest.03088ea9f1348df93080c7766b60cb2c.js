@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e2375d9e576a21a4cb8f321f31c6ec8",
+    "revision": "79d8d44c39fade2ea6498b7aab31294f",
     "url": "/colorboards/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/colorboards/static/css/2.0da342d8.chunk.css"
   },
   {
-    "revision": "d0447f67c53b7b507eae",
+    "revision": "cbf930cc4106ab4f2460",
     "url": "/colorboards/static/css/main.e07c3442.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/colorboards/static/js/2.0f642956.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d0447f67c53b7b507eae",
-    "url": "/colorboards/static/js/main.6e182e9a.chunk.js"
+    "revision": "cbf930cc4106ab4f2460",
+    "url": "/colorboards/static/js/main.2d95cea1.chunk.js"
   },
   {
     "revision": "a33dd08eb6e40f12028a",
